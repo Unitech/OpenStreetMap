@@ -1,0 +1,106 @@
+
+<%= content_for :javascripts do %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<% end %>
+
+<script>
+  function AddDynamicMarkers() {
+  <% @markers.each do |m| %>
+    map.addMarker({
+//    animation : google.maps.Animation.BOUNCE, 
+    lat: <%= m.lat %>,
+    lng: <%= m.lng %>,
+    details : <%= m.id %>,
+    infoWindow: {
+    content: '<%= image_tag m.main_image(:normal) %><br/><center>par <%= m.author %></center>'
+    }
+    });
+  <% end %>
+  }
+</script>
+
+
+<!-- Main page start -->
+
+<div class="vertical-text bottom-text">
+  OpenStreetMap
+</div>
+
+
+<div id="main-page">
+
+  <div id="sidenav">
+    
+    <ul>
+      <li class="active">
+	<%= image_tag 'home.png', :width => '50' %>
+	<small>HOME</small>
+      </li>
+    </ul>
+
+  </div>
+
+  <div id="sidebar">
+    <ul>
+
+      <% @markers.each do |m| %>
+	<% if m.main_image.exists? %>
+	  <li data-lng="<%= m.lng %>" 
+	      data-lat="<%= m.lat %>"
+	      data-id="<%= m.id %>"
+	      class="spots">
+	    <span class="mini-image-prev">
+	      <%= image_tag m.main_image(:small_fix) %>
+	    </span>
+	    <span class="arrondissement-prev">
+	      Paris
+	    </span>
+	  </li>
+	<% end %>
+      <% end %>
+    </ul>
+  </div>
+
+
+  <div id="map-part">
+
+    <div id="map-top">
+      <ul>
+	<li id="set-center">
+	  RESET Map
+	</li>
+	<li>
+
+	  <div id="switch-sound">
+	    Stop sound
+      	  </div>
+
+	  <audio autoplay loop id="background-sound" volume="1" style="display:none">
+      	    <source src="/3902.mp3" type="audio/mpeg" />
+      	    <source src="/3902.ogg" type="audio/ogg" />
+      	    Your browser does not support the audio tag.
+      	  </audio>	  
+	</li>
+
+	<li id="launch-exploration">
+	  Lancer l'exploration
+	</li>
+
+	<li id="register">
+	  <%= image_tag 'login2.png', :height => '11' %>
+	  <% if user_signed_in? %>
+	    <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path  %>	    
+	  <% else %>
+	    <%= link_to 'S\'enregister', new_user_session_path, :method => :delete  %>
+	  <% end %>
+	</li>
+      </ul>
+    </div>
+
+    <div id="map">
+    </div>
+
+  </div>
+  
+</div>

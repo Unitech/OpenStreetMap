@@ -1,0 +1,35 @@
+
+
+  <div id="left-control">
+    
+    
+    <div id="left-content">
+      <!-- <h1>OpenStreetArt</h1> -->
+      <!-- <h2 id="city-name">Paris</h2> -->
+      <!-- <p id="mini-text">OpenStreetArt recense tous les spots des oeuvres d'art éphéméres à Paris. Pochoirs, Collages, Graff, Light Painting, Musées en plein air...</p> -->
+
+    
+      <!-- <div class="button-list"> -->
+      <!-- 	<div id="set-center" class="btn"> -->
+      <!-- 	  Set center -->
+      <!-- 	</div>	 -->
+      <!-- 	<div class="coordinate-display"> -->
+      <!-- 	  <input type="text" id="lat-disp"/> -->
+      <!-- 	  <input type="text" id="lng-disp"/> -->
+      <!-- 	</div> -->
+
+      <!-- 	<div id="switch-sound" class="btn"> -->
+      <!-- 	  Sound OFF -->
+      <!-- 	</div> -->
+
+      <!-- 	<audio autoplay loop id="background-sound" volume="1"> -->
+      <!-- 	  <source src="/3902.mp3" type="audio/mpeg" /> -->
+      <!-- 	  <source src="/3902.ogg" type="audio/ogg" /> -->
+      <!-- 	  Your browser does not support the audio tag. -->
+      <!-- 	</audio> -->
+
+	
+      <!-- </div> -->
+
+    </div>    
+  </div>

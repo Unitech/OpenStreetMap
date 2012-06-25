@@ -1,0 +1,225 @@
+
+@import 'functions';
+
+* {
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    position: fixed;
+    height : 100%;
+    width : 100%;    
+    font-family: arial;
+    color : white;
+}
+
+ul {
+    list-style-type : none;
+}
+
+
+.btn {
+    border : 1px solid white;
+    padding : 3px;
+    @include rounded(5px);
+    text-align : center;
+    &:hover {
+	background-color : #888;
+	cursor : pointer;
+    }
+}
+
+/* ::-webkit-scrollbar { */
+/*     height: 12px; */
+/* width: 12px; */
+/* background: #ffffff; */
+/*     } */
+/* ::-webkit-scrollbar-thumb { */
+/*     background: #000000; */
+/*     -webkit-border-radius: .8ex; */
+/*     -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75); */
+/* } */
+/* ::-webkit-scrollbar-corner { */
+/*     background: #000; */
+/* } */
+
+.vertical-text {
+    position : absolute;
+    bottom : 120px;
+    left : 0px;
+    font-size : 35px;
+    margin-left : -90px;
+
+    color : white;
+
+    writing-mode:tb-rl;
+    white-space:nowrap;
+    display:block;
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+#main-page {
+    width : 100%;
+    height : 100%;
+
+
+    #sidenav {
+	width : 70px;
+	height : 100%;
+	background-color : #0D0D0D;
+	float : left;
+    }
+    
+    #sidebar {
+	width : 260px;
+	height : 100%;
+	background-color : #F8F8F8;
+	float : left;
+	//border-right : 1px solid #C00;
+    }
+    
+    #map-part {
+	width : 1900px;
+	height : 100%;
+	float : left;
+	color : #222;
+	//background-color : #2C2C2C;
+	#map-top {
+	    height : 30px;
+	    width : 100%;
+	    background-color : #2C2C2C;
+	}
+	#map {
+	    width : 100%;
+	    height : 100%;
+	}
+    }
+
+}
+
+
+.bottom-text {
+
+}
+
+
+#sidenav {
+    ul {
+	margin-top : 10px;
+    }
+    li {
+	text-align : center;
+	font-style : uppercase;
+	small {
+	    font-weight : bold;
+	}
+    }
+    .active {
+	color: #B9F0FA;
+	background-image: image-url('nav-icon-active.png');
+	background-position: center right;
+	background-repeat: no-repeat;
+    }
+}
+
+
+#sidebar {
+    border-top : 30px solid #A6C7CA;
+    overflow-y : scroll;
+    li {
+	border-bottom: 1px solid lightGrey;
+	background-color: #F8F8F8;	
+	height: 74px;
+	position : relative;
+	.mini-image-prev {
+	    display : inline-block;
+	    margin-top : 2px;
+	    margin-left : 2px;
+	}
+	.arrondissement-prev {
+	    position : absolute;
+	    display : inline-block;	    
+	    left : 90px;
+	    top : 29px;
+	    font-size : 15px;
+	    font-weight : bold;
+	}
+	&:hover {
+	    background-color : #EEE;
+	    cursor : pointer;
+	}
+    }
+}
+
+
+#map-part {
+    #map-top {
+	color : white;
+	li#register {
+	    float : right;
+	}
+    }
+    ul {
+	margin-left : 5px;
+    }
+    li {
+	a {
+	    color : white;
+	    text-decoration : none;
+	}
+	padding : 6px;
+	font-weight : bold;
+	font-size : 12px;
+	float : left;
+	&:hover {
+	    cursor : pointer;
+	    color : #B9F0FA;
+	}
+    }
+}
+
+#left-control {
+    border-right : 2px solid #C00;
+    width : 340px;
+    height : 100%;
+    float : left;
+    background-color : #191919;
+
+    #sidebar {
+	width : 70px;
+	height : 100%;
+	float : left;
+    }
+    
+    #left-content {
+	padding : 0 9px;
+	
+    }
+
+    .button-list {
+	margin-top : 15px;	
+    }
+
+    
+    h2#city-name {
+	font-family: 'Niconne', cursive;
+	font-weight : normal;
+	font-size : 29px;
+	margin-top : 2px;
+	text-align : center;
+    }
+    h1 {
+	text-align : center;
+	margin-top : 5px;
+	font-size : 35px;
+    }
+    p#mini-text {
+	font-size : 15px;
+	margin-top : 10px;
+	line-height : 16px;
+    }
+}
+

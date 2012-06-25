@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lat: 1.5
+  lng: 
+  spot_type: 1
+  content: MyString
+
+two:
+  lat: 1.5
+  lng: 
+  spot_type: 1
+  content: MyString
