@@ -36,7 +36,7 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 require "rvm/capistrano"
 
-after "deploy:update_code", "deploy:migrate", "deploy:pipeline_precompile", "deploy:stop", "deploy:start"
+after "deploy", "deploy:migrate", "deploy:pipeline_precompile", "deploy:stop", "deploy:start"
 
 namespace :deploy do
 
