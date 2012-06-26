@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>OpenStreetArt Mobile App</title>
+
+
+    <link rel="stylesheet" href="index.css" /> 
+   	
+   	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+  </head>
+  
+  <body onload="init();" id="stage" class="theme">
+  	
+    <div   id="photo-image-btn">
+    	<img data-role="button"  onclick="take_pic();" src="images/appareil.png" />
+    	<br/>
+    	Cheesy picture
+    </div>
+    
+    <div id="image-preview">
+   		<img id="cameraImage" src="" width="250" />
+   	
+		<div data-role="button" onclick="step1();" class="btn">
+   			Validate
+   		</div>
+   		<div data-role="button" onclick="document.location = 'index.html';" class="btn"> 
+   			Cancel
+   		</div>
+   	</div>
+
+	<div class="bottom-menu">
+		<center>
+			OpenStreetArt
+		</center>
+  	</div>
+  	
+
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+	
+  </body>
+</html>

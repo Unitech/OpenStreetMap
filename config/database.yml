@@ -19,7 +19,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  reconnect: true
+  adapter: mysql2  # Rails 3.x uses the mysql2 adapter
+  database: openstreetmap
   pool: 5
-  timeout: 5000
+  username: root
+  password: <%= begin IO.read("/var/pss") rescue "" end %>

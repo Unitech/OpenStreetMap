@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="/home/strzel-a/RailsProject/OpenStreetArt/lib/cordova_mobile_app/OpenStreetMap/libs/phonegap-1.4.1.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

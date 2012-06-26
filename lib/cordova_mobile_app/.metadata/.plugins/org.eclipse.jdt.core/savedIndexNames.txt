@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/home/strzel-a/RailsProject/OpenStreetArt/lib/cordova_mobile_app/.metadata/.plugins/org.eclipse.jdt.core
+3144956343.index
+1858541281.index

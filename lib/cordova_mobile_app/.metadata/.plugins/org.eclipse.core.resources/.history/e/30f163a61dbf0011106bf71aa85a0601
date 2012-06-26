@@ -1,0 +1,78 @@
+
+    
+
+var step3 = function(imageData, coords) {
+    console.log("Step3 - sending photo");
+    
+    
+   /* $.post('http://192.168.1.45:3000/spots/remote_create', { spot : 
+                                                                { 
+                                                                  main_image_base64 : imageData, 
+                                                                  lat : coords.latitude, 
+                                                                  lng : coords.longitude, 
+                                                                  content : 'sisis'}}, 
+                                                                  function() {
+                                                                             alert('ok');
+                                                                  });
+    */
+}
+
+var step2 = function(image64) {
+    var success = function(pos) {
+        console.log('o-*** * ** * * * * key geoloc = ' + pos.coords.accuracy + ' lng = ' + pos.coords.longitude);
+        step3(image64, pos.coords);
+        //pos.coords.latitude;
+        //pos.coords.longitude; 
+        //pos.coords.accuracy;
+    };
+    var fail = function(error) {
+        //step3(false);
+        console.log('Error when getting position');
+        return;
+    };
+  
+     
+    navigator.geolocation.getCurrentPosition(success, fail);
+};
+
+var validate_picture = function(image64) {
+    $('#photo-image-btn').animate({'margin-top': '500'});
+    
+    var cameraImage = document.getElementById('cameraImage');
+    cameraImage.style.visibility = 'visible';
+    cameraImage.src = "data:image/jpeg;base64," + imageData;
+    
+};
+
+function take_pic() {
+    navigator.camera.getPicture(step2, function(ex) {
+        alert("Camera Error!");
+    }, { 
+        quality : 30, 
+        destinationType: Camera.DestinationType.DATA_URL 
+    });
+}
+
+var onDeviceReady = function() {
+    document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+};
+
+function init() {
+    document.addEventListener("deviceready", onDeviceReady, true);
+}   
+
+$().ready(function() {
+ 
+    
+    $('.bottom-menu').click(function() {
+        document.location = "index.html"
+    });
+});
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+!SESSION 2012-06-26 00:47:03.259 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-06-26 00:47:52.643
+!MESSAGE 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/OpenStreetMap/res' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:266)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:249)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$6.run(Sdk.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-06-26 00:47:52.644
+!MESSAGE Resource '/OpenStreetMap/res' does not exist.
+
+!ENTRY org.eclipse.ui 4 4 2012-06-26 00:48:13.226
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-06-26 00:57:00.193
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-06-26 00:57:00.193
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@5a2bf583),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@1e4adb34,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@3cecfaea)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@2691f0de)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@5a2bf583),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@1e4adb34,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@3cecfaea)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@2691f0de)),sourcePriority=1064961)
